@@ -1,0 +1,158 @@
+.article {
+    // ------------------- ARTICLER ONE -------------
+    &-one {
+        margin: 0 1.5rem;
+
+        @include tablet {
+            margin: 0;
+            margin-top: 5rem;
+            position: relative;
+        }
+
+        &-wrapper {
+            @include tablet {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+            }
+        }
+    }
+
+    
+    &-title {
+        font-size: 1.7rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 3.8rem;
+
+        @include tablet {
+            font-size: 2.5rem;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 5rem;
+        }
+    }
+
+
+    &-img {
+        max-width: 100%;
+
+        @include tablet {
+            // position: absolute;
+            max-width: 200%;
+            margin-right: 0;
+        }
+    }
+
+
+// -------------- ARTICLE TWO --------------
+    &-two {
+
+        @include tablet {
+            margin-bottom: 8rem;
+        }
+        
+        &-title {
+            color: var(--text-color);
+            font-size: 2.5rem;
+            margin-top: 3.5rem;
+
+            @include tablet {
+                text-align: left;
+                margin-right: 10.6rem;
+                margin-top: 8rem;
+            }
+        }
+    }
+
+    // --- HEADER ------
+    &-header {
+        background-image: var(--gradient-body);
+        margin-top: 17rem;
+        border-radius: 0 6rem 0 6rem;
+        position: relative;
+        z-index: 1;
+        padding-bottom: 6rem;
+        margin-bottom: 6rem;
+
+        @include tablet {
+            background-image: var(--gradient-body-alt);
+            display: flex;
+            justify-content: space-between;
+            gap: 6rem;
+            margin-top: 5rem;
+            padding-bottom: 0;
+            overflow: visible;
+            // padding-bottom: -6rem;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url("../assets/images/bg-pattern-circles.svg");
+            background-size: 160%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-position: center -9rem;
+            z-index: -1;
+
+            @include tablet {
+                background-size: 70%;
+                background-position: -14rem -37rem;
+            }
+        }
+
+
+        &-image {
+            margin: -10rem 1.5rem 0 1.5rem;
+
+            @include tablet {
+                width: 75%;
+                margin: 0;
+                margin-left: 10.6rem;
+                margin-top: -3rem;
+            }
+        }
+    }
+
+    &-text {
+        font-size: 1.1rem;
+        color: var(--text-color);
+        margin: 0 1.5rem;
+        line-height: 1.8;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+        z-index: 4;
+
+        @include tablet {
+            text-align: left;
+            margin-left: 0;
+            margin-right: 10.6rem;
+            font-size: 1rem;
+        }
+    }
+
+
+    &-content {
+        margin: 0 1.5rem;
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+    }
+
+    &-img-last {
+        margin-bottom: .5rem;
+        
+        @include tablet {
+            margin-left: -19rem;
+        }
+    }
+
+
+
+}

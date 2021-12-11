@@ -1,0 +1,40 @@
+.section {
+    margin: 0;
+    margin-top: 4rem;
+    text-align: center;
+
+
+    @include tablet {
+        text-align: left;
+        width: 74%;
+        margin-left: 5rem;
+    }
+
+
+    &__subtitle {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-top: -1rem;
+
+    }
+    &__text {
+        font-size: 1.05rem;
+        font-weight: 400;
+        line-height: 1.65;
+        color: var(--body-copy);
+        opacity: 80%;
+        margin-bottom: 3.5rem;
+
+        @include tablet {
+            margin-bottom: 6rem;
+        }
+    }
+
+}
+
+.section2 {
+    @include tablet {
+        margin-left: 0;
+        margin-right: 5rem;
+    }
+}

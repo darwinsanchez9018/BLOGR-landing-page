@@ -1,0 +1,10 @@
+#menu-btn {
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+    z-index: 10;
+    @include mobile {
+        display: initial;
+    }
+}

@@ -1,0 +1,146 @@
+include mixins/section
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon", href="assets/images/ds-icon.ico" type="image/x-icon")
+        link(rel="stylesheet", href="css/styles.css")
+        title BLOGR Landing Page | Sánchez Dev
+    body
+        header.header
+            //- ------------- TOP BAR -------------
+            .header-topbar
+                img(src="assets/images/logo.svg", alt="LOGO").header-logo
+
+                nav.mainNav
+                    .mainMenu#mainMenu
+                        ul.mainMenu__list
+
+                            li.mainMenu__item
+                                h4.mainMenu__link Product
+                                .sub-menu
+                                    a(href="#").sub-menu__link Overview
+                                    a(href="#").sub-menu__link Pricing
+                                    a(href="#").sub-menu__link Marketplace
+                                    a(href="#").sub-menu__link Features
+                                    a(href="#").sub-menu__link Integrations
+                                    
+
+                            li.mainMenu__item
+                                h4.mainMenu__link Company
+                                .sub-menu
+                                    a(href="#").sub-menu__link About
+                                    a(href="#").sub-menu__link Team
+                                    a(href="#").sub-menu__link Blog
+                                    a(href="#").sub-menu__link Careers
+                                
+
+                            li.mainMenu__item
+                                h4.mainMenu__link Connect
+                                .sub-menu
+                                    a(href="#").sub-menu__link Contact
+                                    a(href="#").sub-menu__link Newsletter
+                                    a(href="#").sub-menu__link LinkedIn
+
+
+                        .mainMenu__login
+                            a(href="#").button Login
+                            a(href="#").button.button--color Sign Up
+
+                //- MENÚ HAMBURGUESA
+                .fas.fa-bars#menu-btn
+
+            //- ----------- HERO ---------------
+            .header-hero
+
+                h1.header-title A modern publishing platform
+                h2.header-subtitle Grow your audience and build your online brand
+
+                .button-wrapper
+                    a(href="#").button.button--white Start for Free
+                    a(href="#").button.button--transparent Learn More
+
+
+        main.main
+
+            //- ------------ ARTICLE ONE ---------------
+            article.article.article-one
+                h2.article-title Designed for the future
+
+                .article-one-wrapper
+                    picture.article-image
+                        source(srcset="assets/images/illustration-editor-mobile.svg" media="(max-width:900px)")
+                        source(srcset="assets/images/illustration-editor-desktop.svg")
+                        img(src="assets/images/illustration-editor-desktop.svg", alt="Article Image").article-img
+
+                    section.section
+                        +section("Introducing an extensible editor", "Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.")
+
+                        +section("Robust content management", "Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.")
+
+
+            //- -------------- ARTICLE TWO ---------------
+            article.article.article-two
+                .article-header
+                    img(src="assets/images/illustration-phones.svg", alt="Phones Illustration").article-header-image
+
+                    .article-header-info
+                        h2.article-two-title State of the Art Infrastructure
+
+                        p.article-text With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+
+                .article-content
+                    picture.article-image
+                        source(srcset="assets/images/illustration-laptop-mobile.svg" media="(max-width:900px)")
+                        source(srcset="assets/images/illustration-laptop-desktop.svg")
+                        img(src="assets/images/illustration-laptop-desktop.svg", alt="Article Image").article-img-last
+
+                    section.section.section2
+                        +section("Free, open, simple", "Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.")
+
+                        +section("Powerful tooling", "Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, butcapable of producing even the most complicated sites.")
+
+
+        //- ------------------- FOOTER -------------
+        footer.footer
+
+            img(src="assets/images/logo.svg", alt="LOGO footer").footer-logo
+
+
+            .sitemap-container
+                ul.sitemap
+                    li.sitemap__title Product
+                    li.sitemap__item: a(href="#").sitemap__link Overview
+                    li.sitemap__item: a(href="#").sitemap__link Pricing
+                    li.sitemap__item: a(href="#").sitemap__link Marketplace
+                    li.sitemap__item: a(href="#").sitemap__link Features
+                    li.sitemap__item: a(href="#").sitemap__link Integrations
+
+                ul.sitemap
+                    li.sitemap__title Company
+                    li.sitemap__item: a(href="#").sitemap__link About
+                    li.sitemap__item: a(href="#").sitemap__link Team
+                    li.sitemap__item: a(href="#").sitemap__link Blog
+                    li.sitemap__item: a(href="#").sitemap__link Careers
+
+                ul.sitemap
+                    li.sitemap__title Connect
+                    li.sitemap__item: a(href="#").sitemap__link Contact
+                    li.sitemap__item: a(href="#").sitemap__link Newsletter
+                    li.sitemap__item: a(href="#").sitemap__link LinkedIn
+
+
+            .copy
+                .copy__logo
+                    img(src="assets/images/ds-logo.png", alt="LOGO-DS").copy__logos
+                .copy__text © 2021 
+                    a(href="https://darwinsanchez9018.github.io/Frontend-Porfolio/" target="_blank").copy__link Darwin Sánchez. 
+                    |All rights reserved.
+
+        //- ------------- SCRIPTS & ICONS font awesome
+        script(src="js/scripts-dist.js")
+
+        script(src="https://kit.fontawesome.com/a0ab449b77.js" crossorigin="anonymous")

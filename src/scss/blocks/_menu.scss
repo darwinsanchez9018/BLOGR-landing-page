@@ -1,0 +1,147 @@
+// -------------MENÚ MOBILE  NAV--------------------
+.mainMenu {
+    position: fixed;
+    top: 9rem;
+    left: 0;
+    right: 0;
+    margin: 0 1.5rem;
+    padding: .5rem 1.5rem 0 1.5rem;
+    text-align: center;
+    border-radius: .4rem;
+    background-color: var(--text-color);
+    transform: scale(0);
+    opacity: 0;
+    transition: none;
+    z-index: 4;
+    overflow: auto;
+    box-shadow: 15px 0 10px 10px rgba($color: rgb(37, 37, 45), $alpha: 0.1) ;
+
+    &__list {
+        @include reset-list;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            gap: 4rem;
+            padding: 0;
+        }
+    }
+
+
+
+    //--------------- MENÚ horizontal NAV-----------------
+    @include tablet {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        width: 62vw;
+        height: initial;
+        background-color: transparent;
+        transform: scale(1);
+        opacity: 1;
+        transition: .2s ease-out;
+        box-shadow: none;
+
+
+        // Para que no sea visible el menu sin desbordar -------
+        overflow: visible;
+    }
+
+    &__item {
+
+        &:hover {
+            .sub-menu {
+                display: flex;
+            }
+
+            .mainMenu__link::after {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: var(--headings);
+        font-size: 1.15rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        position: relative;
+        cursor: pointer;
+
+        // ----- ARROW dark -----------
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url("../assets/images/icon-arrow-dark.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: .5rem;
+            bottom: 3px;
+            width: 10px;
+            height: 10px;
+            transition: all 1s ease-out;
+
+            // --------- ARROW lght --------
+            @include tablet {
+                background-image: url("../assets/images/icon-arrow-light.svg");
+                bottom: 32px;
+            }
+        }
+
+        @include tablet {
+            display: initial;
+            padding: 2rem 0;
+            font-size: 1rem;
+            color: var(--text-color);
+            text-transform: initial;
+            font-weight: 400;
+            position: sticky;
+            width: 600px;
+
+            @include hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+
+    // CONTAINER Buttons -----------
+    &__login {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 4rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--footer-text);
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border: none;
+            padding-top: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
+
+
+        }
+    }
+}
+
+
+/* -------- Nav activo con la clase ".active */
+.mainMenu.active {
+    transform: scale(1);
+    opacity: 1;
+    transition: .2s ease-out;
+}

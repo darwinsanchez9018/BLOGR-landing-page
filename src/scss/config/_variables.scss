@@ -1,0 +1,28 @@
+:root {
+    // Colors
+    --button-text: hsl(356, 100%, 66%);
+    --button-hover-bg: hsl(355, 100%, 74%);
+    --headings: hsl(208, 49%, 24%);
+
+    // Colors(neutral)
+    --text-color: hsl(0, 0%, 100%);
+    --sub-menu: hsl(0, 0%, 93%);
+    --footer-text: hsl(240, 2%, 79%);
+    --body-copy: hsl(207, 13%, 34%);
+    --footer-bg: hsl(240, 10%, 16%);
+    --hover: rgba(255, 255, 255, .5);
+
+    // Gradients
+    --gradient-button: linear-gradient(to bottom, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    --gradient-button-mobile: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    --gradient-body: linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    --gradient-body-alt: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    --gradient-white: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+    --gradient-hover: linear-gradient(to right, rgba(255, 255, 255, .5), rgba(255, 255, 255, .5));
+
+
+
+    // Fonts
+    --text-font: 'Ubuntu', sans-serif;
+    --heading-font: 'Overpass', sans-serif;
+}

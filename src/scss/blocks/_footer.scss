@@ -1,0 +1,25 @@
+.footer {
+
+    background-color: var(--footer-bg);
+    padding-top: 5rem;
+    border-top-right-radius: 7rem;
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 5rem;
+        padding: 4rem 10.6rem;
+    }
+
+    &-logo {
+        height: 45px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+
+        @include tablet {
+            margin: 0;
+        }
+    }
+}

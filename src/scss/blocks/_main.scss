@@ -1,0 +1,9 @@
+.main {
+    margin: 6rem 0;
+    text-align: center;
+    overflow: hidden;
+
+    @include tablet {
+        margin: 0;
+    }
+}
